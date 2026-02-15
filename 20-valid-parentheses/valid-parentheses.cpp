@@ -15,7 +15,7 @@ public:
             
             // If the symbol is a closing bracket..
             if (symbol == ')') { 
-                if (bracketMatch.empty() || bracketMatch.top() != '(') return false; // If the top isn't a matching opening bracket, it's not a valid parantheses.
+                if (bracketMatch.empty() || bracketMatch.top() != '(') return false; // If the top isn't a matching opening bracket or its empty, it's not a valid parantheses.
                 bracketMatch.pop(); // Else, we can pop the pair.
             } else if (symbol == ']') { // Repeat for each closing bracket type...
                 if (bracketMatch.empty() || bracketMatch.top() != '[') return false;
